@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppRobert.Login"
+             BackgroundColor="#142729"
+             Title="Login">
+    <ContentPage.Content>
+        
+        <StackLayout Padding="40"
+                     VerticalOptions="Center"
+                     HorizontalOptions="FillAndExpand" >
+
+            <!--Imagen de inicio de sesion-->
+            
+            <Image Source="usuarioo.png" WidthRequest="150" HeightRequest="150" Margin="30"></Image>
+            
+            <!--Cuadros de ingreso de texto-->
+            
+            <Entry x:Name="txtusu" Placeholder="Usuario" TextColor="White" PlaceholderColor="White" ></Entry>
+            <Entry x:Name="txtcon" Placeholder="Contraseña" IsPassword="True" TextColor="White" PlaceholderColor="White"></Entry>
+
+            <!--Boton de Login, Funcion segundo Login-->
+            
+            <Button
+                VerticalOptions="Center"
+                Text="Login"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                BorderColor="ForestGreen"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked"
+                >   
+                
+            </Button>
+            
+            <!--Cadena de texto -->
+
+            <Label  HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+
+                        <Span Text="No tienes cuenta?" TextColor="White"/>
+                        
+
+                    </FormattedString>
+                </Label.FormattedText>
+
+                
+                
+            </Label>
+            
+            <!--Boton de pagina de registo-->
+            
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                <FormattedString>
+
+                    <Span Text="Registrar" TextColor="White" TextDecorations="Underline"/>
+
+                        
+                    </FormattedString>
+                    
+                    
+            </Label.FormattedText>
+                
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                </Label.GestureRecognizers>
+                
+                
+                
+            </Label>
+
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

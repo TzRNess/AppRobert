@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppRobert.Registro"
+             BackgroundColor="#142729"
+             Title="Register">
+    
+    <ContentPage.Content>
+        
+        <StackLayout 
+                     WidthRequest="80"
+                     Padding="40"
+                     Margin="10"
+                     HorizontalOptions="FillAndExpand">
+            
+        <!--Imagen de Registro-->
+            <Image 
+              Source="editar.png"
+              WidthRequest="150"
+              HeightRequest="150" 
+              Margin="30"/>
+            
+            <!--Cuadros de textos de Registro-->
+
+            <Entry 
+                x:Name="txtnom" 
+                Placeholder="Nombre"
+                TextColor="White" 
+                PlaceholderColor="White" />
+            
+            <Entry x:Name="txtcorreo" 
+                   Placeholder="Correo"
+                   TextColor="White"
+                   PlaceholderColor="White"
+                   Keyboard="Email" />
+
+            <Entry 
+                x:Name="txtusuario" 
+                Placeholder="Usuario" 
+                TextColor="White" 
+                PlaceholderColor="White" />
+
+            <Entry 
+                x:Name="txtpassword"
+                Placeholder="Contraseña" 
+                IsPassword="True" 
+                TextColor="White" 
+                PlaceholderColor="White"/>
+
+            <Entry 
+                x:Name="txtpassword2" 
+                Placeholder="Re-Contraseña" 
+                IsPassword="True" 
+                TextColor="White"
+                PlaceholderColor="White"/>
+            
+            <!--Boton de Registrar, Funcion segundo Registro-->
+
+            <Button
+                VerticalOptions="Center"
+                Text="Registrar"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                BorderColor="ForestGreen"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked"
+                />
+            
+            <!--Segundo StackLayout-->
+         
+            <StackLayout
+                        Orientation="Horizontal"
+                        HorizontalOptions="Center"
+                        Padding="50">
+
+                <!--Botones de Fb y Google-->
+
+                <ImageButton
+                                    Margin="10"
+                                    Source="facebook.png"
+                                    WidthRequest="40"
+                                    BackgroundColor="Transparent"
+                                    Clicked="ImageButton_Clicked"/>
+
+
+                <ImageButton
+                                    Margin="10"
+                                    Source="google.png"
+                                    WidthRequest="40"
+                                    BackgroundColor="Transparent"
+                                    Clicked="ImageButton_Clicked_1"/>
+            </StackLayout>
+           
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

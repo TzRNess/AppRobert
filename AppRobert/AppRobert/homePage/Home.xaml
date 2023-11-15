@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:anim="clr-namespace:Xamanimation;assembly=Xamanimation"
+             x:Class="AppRobert.homePage.Home"
+             Icon="casa"
+             Title="Home">
+
+    <ContentPage.Resources>
+
+        <anim:FadeToAnimation 
+            x:Key="Ocultar"
+            Target="{x:Reference Fondo}"
+            Opacity="0"
+            Duration="250"
+            />
+
+        <anim:FadeToAnimation 
+            x:Key="Mostrar"
+            Target="{x:Reference Fondo}"
+            Opacity="1"
+            Duration="250"
+            />
+
+    </ContentPage.Resources>
+
+    
+        <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+
+            <Image 
+                    x:Name="Fondo"
+                    Source="logo2"
+                    Grid.Row="0"
+                    Aspect="AspectFill"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Image.Triggers>
+                        
+                        <DataTrigger
+                            TargetType="Image"
+                            Binding="{Binding Source={x:Reference txt}, Path=Text.Length}"
+                            Value="0">
+
+                            <DataTrigger.EnterActions>
+                                <anim:BeginAnimation
+                                        Animation="{StaticResource Mostrar}"/>
+                            </DataTrigger.EnterActions>
+
+                            <DataTrigger.ExitActions>
+                                <anim:BeginAnimation
+                                        Animation="{StaticResource Ocultar}"/>
+                            </DataTrigger.ExitActions>
+
+                        </DataTrigger>
+                        
+                    </Image.Triggers>
+                
+                </Image>
+            <Frame
+                Grid.Row="1"
+                BorderColor="Black"
+                CornerRadius="5"
+                BackgroundColor="Transparent">
+                
+                <Entry
+                    x:Name="txt"
+                    TextColor="Black"
+                    />
+                
+            </Frame>
+        </Grid>
+
+        </Grid>
+
+    <!--<ContentPage.Content>
+        
+        <ScrollView>
+
+
+
+            <Grid
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                RowSpacing="10"
+                ColumnSpacing="10"
+                Padding="10">
+
+                <Frame
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Grid.Row="0"
+                    BorderColor="Transparent"
+                    BackgroundColor="Transparent">
+                    
+                    <Image
+                        Source="e"
+                        WidthRequest="100" 
+                        HeightRequest="100"
+                        Aspect="AspectFill"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        >
+                    </Image>
+                    
+                </Frame>
+
+            </Grid>
+            
+        </ScrollView>
+    </ContentPage.Content>-->
+    
+</ContentPage>

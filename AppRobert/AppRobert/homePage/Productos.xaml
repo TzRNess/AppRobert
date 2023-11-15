@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:anim="clr-namespace:Xamanimation;assembly=Xamanimation"
+             x:Class="AppRobert.homePage.Productos"
+             Icon="productos"
+             Title="Products"
+             BackgroundColor="White">
+
+    <!-- <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>-->
+
+    <!--Atributos para animacion-->
+    
+    <!--<ContentPage.Resources>
+        <anim:FadeToAnimation x:Key="Mostrar"
+                              />
+    </ContentPage.Resources>-->
+    
+    
+
+    <ContentPage.Content>
+        <ScrollView
+            x:Name="Nr2">
+
+
+
+            <Grid
+                    RowSpacing="10"
+                    ColumnSpacing="10"
+                    BackgroundColor="White"
+                    Padding="10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+              
+                
+                
+                <Frame
+                    Grid.Row="0"
+                    BorderColor="#0c2538"
+                    CornerRadius="10"
+                    BackgroundColor="Transparent"
+                    >
+
+                    <!--Buscador en primer grid-->
+                    
+                    <SearchBar
+                        Placeholder="Search..."
+                        PlaceholderColor="Black"
+                        FontSize="Small"
+                        TextColor="Black"
+                        >
+
+
+                    </SearchBar>
+                    
+                    
+                    
+                   
+                    
+                </Frame>
+                
+                
+                
+                <Grid
+                    Grid.Row="1">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Frame
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BorderColor="#0c2538"
+                        CornerRadius="5"
+                        HeightRequest="150"
+                        WidthRequest="150"
+                        x:Name="Nr1">
+                        <StackLayout
+                            >
+                            
+                            <!--Imagenes en Grid-->
+                            
+                            <Label Text="Super Mario"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton 
+                                Source="mario1"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"
+                                WidthRequest="120"
+                                HeightRequest="120"
+                                BackgroundColor="Transparent"/>
+
+
+
+                        </StackLayout>
+
+                        <!--Animacion-->
+                        
+                        <!-- <Frame.Triggers>
+                            <DataTrigger
+                                TargetType="ImageButton">
+                                <DataTrigger.EnterActions>
+                                    <anim:BeginAnimation Animation="{StaticResource Mostrar}" />
+                                </DataTrigger.EnterActions>
+                            </DataTrigger>
+
+                        </Frame.Triggers> -->
+                    
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        CornerRadius="5"
+                        BorderColor="#0c2538"
+                        HeightRequest="150"
+                        WidthRequest="150">
+                        <StackLayout>
+                            <Label Text="Super Mario 2"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton 
+                                Source="mario2"
+                                Aspect="AspectFill"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="CenterAndExpand"
+                                />
+                        </StackLayout>
+
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        CornerRadius="5"
+                        BorderColor="#0c2538"
+                        HeightRequest="150"
+                        WidthRequest="150">
+                        <StackLayout>
+                            <Label Text="Super Mario World"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton Source="mario3"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        CornerRadius="5"
+                        BorderColor="#0c2538"
+                        HeightRequest="150"
+                        WidthRequest="150">
+                        <StackLayout>
+                            <Label Text="Super Mario 3"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton Source="mario4"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        CornerRadius="5"
+                        BorderColor="#0c2538"
+                        HeightRequest="150"
+                        WidthRequest="150">
+                        <StackLayout>
+                            <Label Text="Kamek"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton Source="kamek"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        CornerRadius="5"
+                        BorderColor="#0c2538"
+                        HeightRequest="150"
+                        WidthRequest="150">
+                        <StackLayout>
+                            <Label Text="Luigi"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton Source="luigi"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        CornerRadius="5"
+                        BorderColor="#0c2538"
+                        HeightRequest="150"
+                        WidthRequest="150">
+                        <StackLayout>
+                            <Label Text="Toad"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton Source="toad"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        CornerRadius="5"
+                        BorderColor="#0c2538"
+                        HeightRequest="150"
+                        WidthRequest="150">
+                        <StackLayout>
+                            <Label Text="Yoshi"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton Source="yoshi"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                    </Frame>
+                    
+                    <Frame
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        CornerRadius="5"
+                        BorderColor="#0c2538"
+                        HeightRequest="150"
+                        WidthRequest="150">
+                        <StackLayout>
+                            <Label Text="Super Mario 3"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton Source="mario4"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        CornerRadius="5"
+                        BorderColor="#0c2538"
+                        HeightRequest="150"
+                        WidthRequest="150">
+                        <StackLayout>
+                            <Label Text="Super Mario 3"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton Source="mario4"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                    </Frame>
+
+
+
+                </Grid>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+
+
+</ContentPage>

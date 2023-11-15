@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <!--Diferente funcion de pagina que hace un scroll de imagen-->
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppRobert.Detail"
+             Title="Welcome"
+             >
+
+    
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage>
+                
+                
+                
+                <StackLayout
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+                    
+                    <!--Grid Ordenado-->
+                    
+                    <Grid
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand">
+
+                        <!--Imagen de fondo-->
+                        
+                        <!--Funcion Binding (Hijo). Son datos guardados para usarlos ordenadamente-->
+                        
+                        <Image
+                            
+                            
+                            Source="{Binding Imagen}"
+                            Aspect="AspectFill"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            />
+                        
+                        <Grid
+                            
+                            VerticalOptions="EndAndExpand"
+                            HorizontalOptions="Start"
+                            HeightRequest="100"
+                            WidthRequest="400"
+                            Padding="10"
+                            Margin="10"
+                            >
+                            
+                            <!--Cadena de texto con funcion Hijo del Segundo Detail,
+                                Hace que nuestro codigo sea mas corto-->
+
+                            
+                            <Label
+                                Text="{Binding Texto}"
+                                FontSize="20"
+                                WidthRequest="300"
+                                FontAttributes="Bold"
+                                HorizontalOptions="StartAndExpand"
+                                VerticalOptions="StartAndExpand"
+                                Grid.Column="0" Grid.Row="0"
+                                />
+                            <Label
+                                Text="{Binding Presentacion}"
+                                FontSize="15"
+                                WidthRequest="300"
+                                FontAttributes="Bold"
+                                HorizontalOptions="StartAndExpand"
+                                VerticalOptions="StartAndExpand"
+                                Grid.Column="0" Grid.Row="1"
+                               />
+
+
+
+                        </Grid>
+
+                    </Grid>
+                    
+                    
+                </StackLayout>
+                
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+
+
+    <!--<ContentPage
+        BackgroundImage="logo1">
+    
+        <StackLayout>
+           
+           
+            <Label
+                Text="Aplicacion"
+                VerticalOptions="Start"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"></Label>
+            
+           
+        </StackLayout>
+        
+    </ContentPage>
+
+    <ContentPage
+        BackgroundImage="logo2">
+        <StackLayout>
+            
+            
+            <Label
+                Text="Aplicacion"
+                VerticalOptions="Start"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"></Label>
+
+          
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage 
+        BackgroundImage="logo3">
+       
+        <StackLayout>
+
+            
+            <Label
+                Text="Aplicacion"
+                VerticalOptions="Start"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"></Label>
+
+           
+
+        </StackLayout>
+        
+    </ContentPage>-->
+    
+
+</CarouselPage>
